@@ -366,8 +366,9 @@ nav ul li a:hover {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    align-items: stretch; /* Ensure all cards have same height */
 }
 
 .pricing-card {
@@ -378,6 +379,17 @@ nav ul li a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Take full height of grid cell */
+}
+.price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
 }
 
 .popular {
@@ -402,9 +414,19 @@ nav ul li a:hover {
 }
 
 .price {
-    font-size: 3rem;
+    font-size: 2.8rem; /* Slightly smaller for better fit */
     font-weight: 700;
     color: var(--dark);
+    line-height: 1;
+}
+.discount-badge {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
 .original-price {
@@ -418,15 +440,7 @@ nav ul li a:hover {
     color: var(--gray);
 }
 
-.discount-badge {
-    background-color: var(--accent);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-left: 0.5rem;
-}
+
 
 .pricing-features {
     list-style: none;
@@ -723,4 +737,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
