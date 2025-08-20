@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
 // Update WhatsApp number - Replace with your actual number
 document.addEventListener('DOMContentLoaded', function() {
     const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
-    const phoneNumber = '919876543210'; // Replace with your WhatsApp number
+    const phoneNumber = '918074236286'; // Replace with your WhatsApp number
 
     whatsappLinks.forEach(link => {
         link.href = link.href.replace(/wa.me\/\d+/, `wa.me/${phoneNumber}`);
@@ -43,4 +43,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
 });
